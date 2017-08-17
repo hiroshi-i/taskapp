@@ -137,7 +137,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQw-CO-79U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQw-CO-79U">
                                 <rect key="frame" x="16" y="436" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -154,11 +154,13 @@
                             <constraint firstItem="mU2-OU-ieB" firstAttribute="top" secondItem="Ede-Oi-RXf" secondAttribute="bottom" constant="10" id="JeM-YE-nN2"/>
                             <constraint firstItem="uTR-Y8-ffB" firstAttribute="top" secondItem="DYt-Dh-5Xr" secondAttribute="bottom" constant="10" id="JgR-3W-Dto"/>
                             <constraint firstItem="mU2-OU-ieB" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leading" id="N1q-BH-E0i"/>
+                            <constraint firstItem="cQw-CO-79U" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="NIT-OR-fQT"/>
                             <constraint firstItem="DYt-Dh-5Xr" firstAttribute="top" secondItem="LWF-EW-g8w" secondAttribute="bottom" constant="10" id="Nh0-lH-dcS"/>
                             <constraint firstItem="LWF-EW-g8w" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="O9l-CA-o6v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ede-Oi-RXf" secondAttribute="trailing" id="QCJ-Yh-6QZ"/>
                             <constraint firstItem="cQw-CO-79U" firstAttribute="top" secondItem="mU2-OU-ieB" secondAttribute="bottom" constant="10" id="RN2-u5-tlQ"/>
                             <constraint firstItem="77Z-pj-esj" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="RS9-0i-nBW"/>
+                            <constraint firstItem="cQw-CO-79U" firstAttribute="top" secondItem="mU2-OU-ieB" secondAttribute="bottom" constant="10" id="Wtm-JD-L8M"/>
                             <constraint firstItem="LWF-EW-g8w" firstAttribute="top" secondItem="JSO-d9-Tge" secondAttribute="bottom" constant="10" id="edB-KD-SqQ"/>
                             <constraint firstItem="77Z-pj-esj" firstAttribute="top" secondItem="cQw-CO-79U" secondAttribute="bottom" constant="10" id="fMF-xp-Bhe"/>
                             <constraint firstItem="Ede-Oi-RXf" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="hLw-0j-af0"/>

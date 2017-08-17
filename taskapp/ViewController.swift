@@ -74,26 +74,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tableView.reloadData()
         }
    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar){
-        
-        if let search = searchBar.text{
-            taskArray = try! Realm().objects(Task.self).filter("category = '\(search)'")
-        }else{
-            taskArray = try! Realm().objects(Task.self).sorted(byKeyPath:"date", ascending:false)
-        }
-    }
     
     //テキストが変更される毎に呼ばれる
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let searchCategory = realm.objects(Task.self).filter("category = '\(searchText)'") // Realmに保存されているすべてのTaskオブジェクトを取得
         
-        taskArray = searchCategory
+        if searchText == ""{
+            taskArray = try! Realm().objects(Task.self).sorted(byKeyPath:"date", ascending:false)
+        }else{
+            let searchCategory = realm.objects(Task.self).filter("category = '\(searchText)'")
+            // Realmに保存されているすべてのTaskオブジェクトを取得
+            
+            taskArray = searchCategory
+        }
+        
+        tableView.reloadData()
     }
 
 
     //検索をキャンセルした時のメソッド
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         taskArray = try! Realm().objects(Task.self).sorted(byKeyPath:"date", ascending:false)
+        tableView.reloadData()
+
     }
     
     //MARK: UITableViewDelegateプロトコルのメソッド
