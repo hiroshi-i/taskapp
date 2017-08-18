@@ -101,13 +101,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTR-Y8-ffB">
-                                <rect key="frame" x="16" y="145" width="35" height="21"/>
+                                <rect key="frame" x="16" y="223" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-Oi-RXf">
-                                <rect key="frame" x="16" y="176" width="343" height="120"/>
+                                <rect key="frame" x="16" y="254" width="343" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="sI9-ux-0oQ"/>
@@ -117,7 +117,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mU2-OU-ieB">
-                                <rect key="frame" x="0.0" y="306" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="384" width="375" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OyM-WC-VR2"/>
                                 </constraints>
@@ -131,40 +131,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77Z-pj-esj">
-                                <rect key="frame" x="16" y="467" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQw-CO-79U">
-                                <rect key="frame" x="16" y="436" width="87" height="21"/>
+                                <rect key="frame" x="16" y="152" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77Z-pj-esj">
+                                <rect key="frame" x="16" y="183" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uTR-Y8-ffB" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="0m1-zs-7k3"/>
-                            <constraint firstItem="Ede-Oi-RXf" firstAttribute="top" secondItem="uTR-Y8-ffB" secondAttribute="bottom" constant="10" id="5AO-B3-2hZ"/>
                             <constraint firstItem="DYt-Dh-5Xr" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="6Yy-Vt-WmZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DYt-Dh-5Xr" secondAttribute="trailing" id="D6n-ux-nbT"/>
                             <constraint firstAttribute="trailing" secondItem="mU2-OU-ieB" secondAttribute="trailing" id="F6g-Wx-GQq"/>
-                            <constraint firstItem="mU2-OU-ieB" firstAttribute="top" secondItem="Ede-Oi-RXf" secondAttribute="bottom" constant="10" id="JeM-YE-nN2"/>
-                            <constraint firstItem="uTR-Y8-ffB" firstAttribute="top" secondItem="DYt-Dh-5Xr" secondAttribute="bottom" constant="10" id="JgR-3W-Dto"/>
                             <constraint firstItem="mU2-OU-ieB" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leading" id="N1q-BH-E0i"/>
                             <constraint firstItem="cQw-CO-79U" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="NIT-OR-fQT"/>
                             <constraint firstItem="DYt-Dh-5Xr" firstAttribute="top" secondItem="LWF-EW-g8w" secondAttribute="bottom" constant="10" id="Nh0-lH-dcS"/>
                             <constraint firstItem="LWF-EW-g8w" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="O9l-CA-o6v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ede-Oi-RXf" secondAttribute="trailing" id="QCJ-Yh-6QZ"/>
-                            <constraint firstItem="cQw-CO-79U" firstAttribute="top" secondItem="mU2-OU-ieB" secondAttribute="bottom" constant="10" id="RN2-u5-tlQ"/>
                             <constraint firstItem="77Z-pj-esj" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="RS9-0i-nBW"/>
-                            <constraint firstItem="cQw-CO-79U" firstAttribute="top" secondItem="mU2-OU-ieB" secondAttribute="bottom" constant="10" id="Wtm-JD-L8M"/>
+                            <constraint firstItem="77Z-pj-esj" firstAttribute="trailing" secondItem="00l-Tr-pjp" secondAttribute="trailingMargin" id="Snj-0w-Cfw"/>
+                            <constraint firstItem="77Z-pj-esj" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="UHz-h5-adJ"/>
+                            <constraint firstItem="Ede-Oi-RXf" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="ZOJ-OB-Deo"/>
+                            <constraint firstItem="Ede-Oi-RXf" firstAttribute="top" secondItem="uTR-Y8-ffB" secondAttribute="bottom" constant="10" id="ZYz-oO-gr7"/>
+                            <constraint firstItem="uTR-Y8-ffB" firstAttribute="top" secondItem="77Z-pj-esj" secondAttribute="bottom" constant="10" id="bIm-AP-koI"/>
+                            <constraint firstAttribute="trailing" secondItem="mU2-OU-ieB" secondAttribute="trailing" id="ddl-jq-e4s"/>
+                            <constraint firstItem="Ede-Oi-RXf" firstAttribute="trailing" secondItem="00l-Tr-pjp" secondAttribute="trailingMargin" id="dkW-gV-9pl"/>
                             <constraint firstItem="LWF-EW-g8w" firstAttribute="top" secondItem="JSO-d9-Tge" secondAttribute="bottom" constant="10" id="edB-KD-SqQ"/>
-                            <constraint firstItem="77Z-pj-esj" firstAttribute="top" secondItem="cQw-CO-79U" secondAttribute="bottom" constant="10" id="fMF-xp-Bhe"/>
+                            <constraint firstItem="mU2-OU-ieB" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leading" id="fWR-N1-COF"/>
                             <constraint firstItem="Ede-Oi-RXf" firstAttribute="leading" secondItem="00l-Tr-pjp" secondAttribute="leadingMargin" id="hLw-0j-af0"/>
+                            <constraint firstItem="mU2-OU-ieB" firstAttribute="top" secondItem="Ede-Oi-RXf" secondAttribute="bottom" constant="10" id="hXW-eH-cqT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="77Z-pj-esj" secondAttribute="trailing" id="p4A-gK-Rrz"/>
+                            <constraint firstItem="cQw-CO-79U" firstAttribute="top" secondItem="DYt-Dh-5Xr" secondAttribute="bottom" constant="17" id="qka-oP-Asx"/>
+                            <constraint firstItem="77Z-pj-esj" firstAttribute="top" secondItem="cQw-CO-79U" secondAttribute="bottom" constant="10" id="z20-8b-ask"/>
                         </constraints>
                     </view>
                     <connections>
@@ -177,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QG-xI-ZFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="36"/>
+            <point key="canvasLocation" x="1720.8" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y27-YM-QOU">

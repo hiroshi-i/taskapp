@@ -36,17 +36,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         searchBar.enablesReturnKeyAutomatically = false
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     //MARK: UITableViewDataSourceプロトコルのメソッド
     //データ型の数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-            return taskArray.count
-        }
+        return taskArray.count
+    }
     
     //各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath) -> UITableViewCell{
@@ -55,25 +55,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         //cellに値を設定する
-            let task = taskArray[indexpath.row]
-            cell.textLabel?.text = "\(task.title)\(task.category)"
+        let task = taskArray[indexpath.row]
+        cell.textLabel?.text = "\(task.title)(\(task.category))"
         
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyy-MM-dd HH:mm"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyy-MM-dd HH:mm"
         
-            let dateString:String = formatter.string(from: task.date as Date)
-            cell.detailTextLabel?.text = dateString
+        let dateString:String = formatter.string(from: task.date as Date)
+        cell.detailTextLabel?.text = dateString
         
         return cell
     }
-
-
+    
+    
     //検索ボタン押した時のメソッド
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
-            tableView.reloadData()
-        }
-   
+        tableView.reloadData()
+    }
+    
     
     //テキストが変更される毎に呼ばれる
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -89,13 +89,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.reloadData()
     }
-
-
+    
+    
     //検索をキャンセルした時のメソッド
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         taskArray = try! Realm().objects(Task.self).sorted(byKeyPath:"date", ascending:false)
         tableView.reloadData()
-
+        
     }
     
     //MARK: UITableViewDelegateプロトコルのメソッド
@@ -107,10 +107,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //セルが削除可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle{
         return UITableViewCellEditingStyle.delete
-        }
+    }
     
-
-
+    
+    
     
     //Deleteボタンが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
@@ -132,13 +132,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //未通知のローカル出力一覧をログ出力
             center.getPendingNotificationRequests{(requests: [UNNotificationRequest]) in
                 for request in requests{
-                print("/---------------")
-                print(request)
-                print("---------------/")
+                    print("/---------------")
+                    print(request)
+                    print("---------------/")
                 }
             }
-            }
         }
+    }
     
     
     //Segueで画面遷移する時に呼ばれる
@@ -152,21 +152,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let task = Task()
             task.date = NSDate()
             
-        if taskArray.count != 0{
-            task.id = taskArray.max(ofProperty: "id")! + 1
-                }
-            inputViewController.task = task
+            if taskArray.count != 0{
+                task.id = taskArray.max(ofProperty: "id")! + 1
             }
+            inputViewController.task = task
         }
-        
+    }
+    
     
     //入力画面から戻ってきた時にtableViewを更新させる
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-            }
-    
     }
+    
+}
 
 
 
